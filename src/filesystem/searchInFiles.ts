@@ -1,7 +1,6 @@
 import { promises as fs } from 'fs';
 import * as path from 'path';
 
-
 async function searchInFiles(dir: string, searchString: string): Promise<void> {
   try {
     const files = await fs.readdir(dir);

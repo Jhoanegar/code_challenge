@@ -4,21 +4,31 @@
   "main": "main.ts",
   "scripts": {
     "test": "NODE_PATH=. jest",
+    "lint": "eslint --ext .js,.jsx,.json,.ts,.tsx src/ && tsc --noEmit",
     "start": "NODE_PATH=. node -r src/boot/registerBabel.js src/main.js"
   },
   "author": "",
   "license": "ISC",
   "description": "",
-  "devDependencies": {
+  "dependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.25.7",
     "@babel/preset-typescript": "^7.25.7",
     "@babel/register": "^7.25.7",
     "@types/jest": "^29.5.13",
     "@types/node": "^22.7.4",
     "@types/sqlite3": "^3.1.11",
-    "jest": "^29.7.0",
     "sqlite": "^5.1.1",
     "sqlite3": "^5.1.7",
-    "typescript": "^5.6.2"
+    "typescript": "5.4.5"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "~7.9.0",
+    "@typescript-eslint/parser": "~7.9.0",
+    "eslint": "~8.57.0",
+    "eslint-config-prettier": "~8.3.0",
+    "eslint-plugin-json": "~3.0.0",
+    "eslint-plugin-prettier": "~3.4.0",
+    "jest": "^29.7.0",
+    "prettier": "~2.3.2"
   }
 }
